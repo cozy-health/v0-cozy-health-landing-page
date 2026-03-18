@@ -10,7 +10,7 @@ export function ForProvidersSection() {
   ]
 
   return (
-    <section id="providers" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0460d8] text-white">
+    <section id="providers" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#f25c05] text-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
@@ -21,11 +21,11 @@ export function ForProvidersSection() {
             
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-balance">
               Cozy becomes your{" "}
-              <span className="text-[#00bc4c]">digital co-pilot</span>
+              <span className="text-[#f2cb05]">digital co-pilot</span>
             </h2>
-            
-            <p className="text-lg text-white/80 leading-relaxed">
-              Instead of guessing how a patient felt between sessions, clinicians see real patterns:
+
+            <p className="text-lg text-white/90 leading-relaxed">
+              When an individual adds you as their provider, you get instant access to a dedicated dashboard. Instead of guessing how a patient felt between sessions, you see real patterns:
             </p>
 
             <div className="flex flex-wrap gap-3">
@@ -44,10 +44,10 @@ export function ForProvidersSection() {
             </div>
             
             <p className="text-lg text-white leading-relaxed">
-              This allows providers to <strong className="text-[#00bc4c]">intervene earlier</strong>, <strong className="text-[#f2cb05]">respond faster</strong>, and <strong className="text-[#f25c05]">deliver better care</strong>.
+              This allows you to <strong className="text-[#f2cb05]">intervene earlier</strong>, <strong className="text-white">respond faster</strong>, and <strong className="text-[#00bc4c]">deliver better care</strong>.
             </p>
 
-            <Button size="lg" className="bg-white text-[#0460d8] hover:bg-white/90 mt-4">
+            <Button size="lg" className="bg-white text-[#f25c05] hover:bg-white/90 mt-4">
               Partner With Us
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
@@ -108,8 +108,8 @@ export function ForProvidersSection() {
               </div>
             </div>
 
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#00bc4c]/30 rounded-full blur-2xl" />
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-[#0460d8]/30 rounded-full blur-2xl" />
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#f2cb05]/30 rounded-full blur-2xl" />
+            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-white/20 rounded-full blur-2xl" />
           </div>
         </div>
       </div>

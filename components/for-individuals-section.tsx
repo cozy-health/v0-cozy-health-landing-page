@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
-import { Sparkles, TrendingUp, Target, Lightbulb, Clock, ArrowRight } from "lucide-react"
+import { Sparkles, TrendingUp, Target, Lightbulb, Clock } from "lucide-react"
+import { SiAppstore, SiGoogleplay } from "react-icons/si"
 
 export function ForIndividualsSection() {
   const features = [
@@ -72,10 +73,19 @@ export function ForIndividualsSection() {
               Not just when things break, but before they do.
             </p>
 
-            <Button size="lg" className="bg-[#0460d8] hover:bg-[#0460d8]/90 text-white mt-4">
-              Start Your Journey
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
+            <div className="space-y-3 mt-6">
+              <p className="text-sm text-muted-foreground font-medium">Coming soon to</p>
+              <div className="flex flex-wrap gap-3">
+                <Button size="lg" className="bg-foreground hover:bg-foreground/90 text-background">
+                  <SiAppstore className="w-5 h-5 mr-2" />
+                  App Store
+                </Button>
+                <Button size="lg" className="bg-foreground hover:bg-foreground/90 text-background">
+                  <SiGoogleplay className="w-5 h-5 mr-2" />
+                  Google Play
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
