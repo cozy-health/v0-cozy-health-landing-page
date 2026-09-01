@@ -88,12 +88,12 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-background/70 hover:text-background transition-colors">
+                <a href="mailto:cozyhealth.hq@gmail.com" className="text-sm text-background/70 hover:text-background transition-colors">
                   Contact
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-background/70 hover:text-background transition-colors">
+                <a href="/privacy-policy" className="text-sm text-background/70 hover:text-background transition-colors">
                   Privacy Policy
                 </a>
               </li>

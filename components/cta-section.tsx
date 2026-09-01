@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Heart } from "lucide-react"
 
@@ -19,12 +20,11 @@ export function CTASection() {
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button size="lg" className="bg-white text-[#0460d8] hover:bg-white/90 px-8 shadow-xl">
-            Join the Waitlist
-            <ArrowRight className="w-4 h-4 ml-2" />
+          <Button asChild size="lg" className="bg-white text-[#0460d8] hover:bg-white/90 px-8 shadow-xl">
+            <Link href="/waitlist">Join the Waitlist<ArrowRight className="w-4 h-4 ml-2" /></Link>
           </Button>
-          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8">
-            Contact Us
+          <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8">
+            <a href="mailto:cozyhealth.hq@gmail.com">Contact Us</a>
           </Button>
         </div>
       </div>
