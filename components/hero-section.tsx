@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Heart, Shield, Users } from "lucide-react"
 
@@ -22,9 +23,11 @@ export function HeroSection() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-[#0460d8] hover:bg-[#0460d8]/90 text-white px-8">
-                Take Cozy With You
-                <ArrowRight className="w-4 h-4 ml-2" />
+              <Button asChild size="lg" className="bg-[#0460d8] hover:bg-[#0460d8]/90 text-white px-8">
+                <Link href="/waitlist">
+                  Join the Waitlist
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
               </Button>
               <Button size="lg" variant="outline" className="border-[#0460d8] text-[#0460d8] hover:bg-[#0460d8]/10">
                 Learn More
