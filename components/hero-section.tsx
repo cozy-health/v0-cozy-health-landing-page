@@ -19,7 +19,7 @@ export function HeroSection() {
             </h1>
             
             <p className="text-lg sm:text-xl text-muted-foreground max-w-xl leading-relaxed">
-              Continuous care — before, between, and after sessions. A simple, closed loop so support never disappears when you need it most.
+              Continuous care, before, between, and after sessions. A simple, closed loop so support never disappears when you need it most.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">

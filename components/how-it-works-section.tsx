@@ -13,7 +13,7 @@ export function HowItWorksSection() {
             How It Works
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            A simple, closed loop — so support never disappears when you need it most.
+            A simple, closed loop, so support never disappears when you need it most.
           </p>
         </div>
 
@@ -84,7 +84,7 @@ export function HowItWorksSection() {
             <div className="mt-12 flex justify-center">
               <div className="flex items-center gap-4 px-8 py-4 bg-[#f2cb05]/10 rounded-full border-2 border-[#f2cb05]">
                 <RotateCcw className="w-6 h-6 text-[#f2cb05]" />
-                <span className="font-medium text-foreground">Back to you — faster, kinder, more connected.</span>
+                <span className="font-medium text-foreground">Back to you, faster, kinder, more connected.</span>
               </div>
             </div>
           </div>
@@ -135,7 +135,7 @@ export function HowItWorksSection() {
           </div>
 
           <div className="flex items-center justify-center gap-3 px-6 py-4 bg-[#f2cb05]/10 rounded-full border-2 border-[#f2cb05]">
-            <span className="font-medium text-foreground text-center text-sm">Back to you — faster, kinder, more connected.</span>
+            <span className="font-medium text-foreground text-center text-sm">Back to you, faster, kinder, more connected.</span>
           </div>
         </div>
       </div>
