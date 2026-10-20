@@ -62,7 +62,7 @@ export function ForIndividualsSection() {
             
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground text-balance">
               Cozy becomes your{" "}
-              <span className="text-[#0460d8]">24/7 support system</span>
+              <span className="text-[#0460d8]">everyday wellbeing toolkit</span>
             </h2>
             
             <p className="text-lg text-muted-foreground leading-relaxed">

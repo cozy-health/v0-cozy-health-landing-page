@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
+import { AnalyticsChoice } from '@/components/analytics-choice'
 import './globals.css'
 
 const _geist = Geist({ subsets: ["latin"] });
@@ -8,7 +8,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'Cozy Health | Mental Health Care That Stays With You',
-  description: 'Continuous mental health care before, between, and after sessions. Cozy bridges patients and providers with 24/7 support, mood tracking, and real-time insights.',
+  description: 'Continuous mental health care before, between, and after sessions. Cozy bridges patients and providers with self-care tools, mood tracking, and personal insights.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -38,7 +38,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="font-sans antialiased">
         {children}
-        <Analytics />
+        <AnalyticsChoice />
       </body>
     </html>
   )
