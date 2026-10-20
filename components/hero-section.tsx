@@ -36,8 +36,8 @@ export function HeroSection() {
 
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border">
               <div className="flex flex-col gap-1">
-                <span className="text-2xl font-bold text-[#0460d8]">24/7</span>
-                <span className="text-sm text-muted-foreground">Support Available</span>
+                <span className="text-2xl font-bold text-[#0460d8]">Self-care</span>
+                <span className="text-sm text-muted-foreground">At your pace</span>
               </div>
               <div className="flex flex-col gap-1">
                 <span className="text-2xl font-bold text-[#00bc4c]">Real-time</span>
@@ -45,7 +45,7 @@ export function HeroSection() {
               </div>
               <div className="flex flex-col gap-1">
                 <span className="text-2xl font-bold text-[#f25c05]">Proactive</span>
-                <span className="text-sm text-muted-foreground">Early Intervention</span>
+                <span className="text-sm text-muted-foreground">Personal Reflection</span>
               </div>
             </div>
           </div>
