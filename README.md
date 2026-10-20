@@ -4,23 +4,21 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v
 
 ## Railway hosting
 
-The website runs on the `cozy-health-website` service in the existing `celebrated-flexibility` Railway project, production environment. The live site is https://cozyhealth.org with Cloudflare DNS. Deployments currently use the Railway CLI from this folder; this local source is not a Git checkout and GitHub autodeployment is not connected to Railway.
+The website uses the `cozy-health-website` service in the `celebrated-flexibility` Railway project. Separate development and production environments are configured for GitHub `develop` and `main`, with Railway Wait for CI enabled. This directory is connected to `cozy-health/v0-cozy-health-landing-page`.
+
+The live site remains https://cozyhealth.org on the original environment, now named development, until the isolated production cutover is validated. Web CI is currently blocked by GitHub account billing/spending limits. Private-repository main protection also requires a supported GitHub plan. Production promotion and DNS cutover are outstanding; do not bypass CI with a CLI upload.
 
 The Dockerfile builds with Node.js 22 and runs the Next.js standalone server as a non-root user. Railway supplies `PORT`; the default is 8080. The health check is `/`. Analytics keys remain unset.
 
-Before deploying, run `npm run typecheck`, `npm run legal:check`, `npm test`, and `npm run build`. Deploy only to the website service:
+Before releasing, run `npm run typecheck`, `npm run legal:check`, `npm test`, and `npm run build`. When sibling repositories are available, also run `npm run legal:check -- --workspace`. Push development changes to `develop`, then merge a passing release PR to `main` for production.
 
-```sh
-railway up . --path-as-root --project 33f9a938-49e3-42c5-83c7-633ee85760fa --environment production --service 3244f8df-dbca-4d75-8aaf-adf9acba9c2b --detach
-```
+Original development preview: https://cozy-health-website-production.up.railway.app. New production preview: https://cozy-health-website-production-a679.up.railway.app (pending production deployment).
 
-Preview: https://cozy-health-website-production.up.railway.app
-
-See `../docs/legal/HOSTING_MIGRATION.md` for DNS records, mail preservation and cutover status. Legal documents remain drafts until their separate review requirements are resolved.
+See `../docs/legal/ENVIRONMENT_SPLIT.md` for current status and `../docs/legal/HOSTING_MIGRATION.md` for the earlier DNS migration evidence. Legal documents remain drafts until their separate review requirements are resolved. Set `COZY_DEPLOYMENT_ENV=production` only in production; development builds send `X-Robots-Tag: noindex, nofollow`. Analytics keys remain unset.
 
 ## Built with v0
 
-The original source was linked to a [v0](https://v0.app) project. Its original Vercel hosting project is paused, with deployment history retained for rollback. Changes in v0 do not automatically update the Railway CLI deployment.
+The original source was linked to a [v0](https://v0.app) project. Its original Vercel hosting project is paused, with deployment history retained for rollback. Railway releases follow the GitHub branch and CI process above.
 
 [Continue working on v0 →](https://v0.app/chat/projects/prj_qgFLnTjsQiMQeN08tA3h3CtjVzjA)
 
