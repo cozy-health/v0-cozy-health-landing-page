@@ -6,7 +6,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v
 
 The website uses the `cozy-health-website` service in the `celebrated-flexibility` Railway project. Separate development and production environments are configured for GitHub `develop` and `main`, with Railway Wait for CI enabled. This directory is connected to `cozy-health/v0-cozy-health-landing-page`.
 
-The live site remains https://cozyhealth.org on the original environment, now named development, until the isolated production cutover is validated. Web CI is currently blocked by GitHub account billing/spending limits. Private-repository main protection also requires a supported GitHub plan. Production promotion and DNS cutover are outstanding; do not bypass CI with a CLI upload.
+The live site remains https://cozyhealth.org on the original environment, now named development, until the isolated production cutover is validated. Web CI is passing and main-branch protection is enabled. The remaining blocker is Railway's GitHub integration access to this repository: source branch names are configured, but Railway rejected creation of the actual deployment triggers. Grant the Railway GitHub App access to this repository, then create/verify its develop and main triggers with Wait for CI. Production promotion and website DNS cutover are outstanding; do not bypass CI with a CLI upload.
 
 The Dockerfile builds with Node.js 22 and runs the Next.js standalone server as a non-root user. Railway supplies `PORT`; the default is 8080. The health check is `/`. Analytics keys remain unset.
 
