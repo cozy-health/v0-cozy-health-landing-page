@@ -6,13 +6,13 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v
 
 The website uses the `cozy-health-website` service in the `celebrated-flexibility` Railway project. Separate development and production environments are configured for GitHub `develop` and `main`, with Railway Wait for CI enabled. This directory is connected to `cozy-health/v0-cozy-health-landing-page`.
 
-The live site remains https://cozyhealth.org on the original environment, now named development, until the isolated production cutover is validated. Web CI is passing and main-branch protection is enabled. The remaining blocker is Railway's GitHub integration access to this repository: source branch names are configured, but Railway rejected creation of the actual deployment triggers. Grant the Railway GitHub App access to this repository, then create/verify its develop and main triggers with Wait for CI. Production promotion and website DNS cutover are outstanding; do not bypass CI with a CLI upload.
+Railway's GitHub integration has access to this repository, and both environment deployment triggers are connected. Main-branch protection and Railway Wait for CI require passing release checks. Production uses https://cozyhealth.org; development uses https://dev.cozyhealth.org. The deployment handoff records the latest domain cutover and verification status. Use the GitHub release flow rather than bypassing CI with a CLI upload.
 
 The Dockerfile builds with Node.js 22 and runs the Next.js standalone server as a non-root user. Railway supplies `PORT`; the default is 8080. The health check is `/`. Analytics keys remain unset.
 
 Before releasing, run `npm run typecheck`, `npm run legal:check`, `npm test`, and `npm run build`. When sibling repositories are available, also run `npm run legal:check -- --workspace`. Push development changes to `develop`, then merge a passing release PR to `main` for production.
 
-Original development preview: https://cozy-health-website-production.up.railway.app. New production preview: https://cozy-health-website-production-a679.up.railway.app (pending production deployment).
+Development preview: https://cozy-health-website-production.up.railway.app. Production preview: https://cozy-health-website-production-a679.up.railway.app.
 
 See `../docs/legal/ENVIRONMENT_SPLIT.md` for current status and `../docs/legal/HOSTING_MIGRATION.md` for the earlier DNS migration evidence. Legal documents remain drafts until their separate review requirements are resolved. Set `COZY_DEPLOYMENT_ENV=production` only in production; development builds send `X-Robots-Tag: noindex, nofollow`. Analytics keys remain unset.
 
