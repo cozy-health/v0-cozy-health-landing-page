@@ -6,6 +6,7 @@ const site = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const root = path.resolve(site, '..')
 const source = fs.readFileSync(path.join(site, 'lib/legal/documents.json'), 'utf8')
 const manifest = JSON.parse(source)
+if (manifest.documents.some(doc => doc.published && doc.editorial_status !== 'final')) throw Error('Only final editorial copy can be published')
 if (manifest.documents.some(doc => /\bAI\b|artificial intelligence|\bquiz\b|\[INSERT/i.test([doc.title, ...doc.sections.flatMap(s => [s.heading, ...s.paragraphs])].join('\n')))) throw Error('Launch text contains excluded terminology or placeholders')
 const digest = crypto.createHash('sha256').update(source).digest('hex')
 const archivePath = path.join(site, 'lib/legal/versions.json')
@@ -30,7 +31,8 @@ const outputs = new Map([
  [path.join(root, 'cozy-health-mobile-app-main-main/assets/legal/documents.json'), source],
 ])
 for (const document of manifest.documents) {
-  const markdown = [`<!-- Generated from landing-page lib/legal/documents.json. Edit that source and regenerate. -->`, `# ${document.title}`, `Review draft · Version ${document.version} · ${document.updated}`, `Public route: ${manifest.base_url}${document.route}`, ...document.sections.flatMap(section => [`## ${section.heading}`, ...section.paragraphs])].join('\n\n') + '\n'
+  const status = document.published ? 'Published' : document.editorial_status === 'final' ? 'Final copy — not yet effective' : 'Review draft'
+  const markdown = [`<!-- Generated from landing-page lib/legal/documents.json. Edit that source and regenerate. -->`, `# ${document.title}`, `${status} · Version ${document.version} · ${document.updated}`, `Public route: ${manifest.base_url}${document.route}`, ...document.sections.flatMap(section => [`## ${section.heading}`, ...section.paragraphs])].join('\n\n') + '\n'
   outputs.set(path.join(root, 'docs/legal/generated', `${document.audience}-${document.id}.md`), markdown)
 }
 for (const [dest, content] of outputs) {

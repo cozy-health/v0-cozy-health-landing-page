@@ -93,12 +93,10 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/privacy" className="text-sm text-background/70 hover:text-background transition-colors">
-                  Privacy Policy
+                <a href="/legal" className="text-sm text-background/70 hover:text-background transition-colors">
+                  Legal &amp; policies
                 </a>
               </li>
-            <li><a href="/legal" className="text-sm text-background/70 hover:text-background">All policies & provider documents</a></li>
-              <li><a href="/support" className="text-sm text-background/70 hover:text-background">Support & account deletion</a></li>
             </ul>
           </div>
         </div>
