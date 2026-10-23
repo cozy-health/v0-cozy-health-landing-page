@@ -8,6 +8,7 @@ export function AnalyticsChoice() {
   const pathname = usePathname()
   useEffect(() => { void trackWebsite('website_active') }, [])
   function choose(enabled: boolean) { setAnalyticsChoice(enabled); setOpen(false); if (enabled) void trackWebsite('website_active') }
+  if (pathname === '/guardian-authorization') return null
   return <>
     <button onClick={() => setOpen(true)} className="fixed bottom-3 left-3 z-40 rounded-lg border border-border bg-background px-3 py-2 text-xs shadow-sm">Privacy choices</button>
     {(open || (pathname === '/' && choice === null)) && <section role="region" aria-label="Optional analytics" className="fixed bottom-14 left-3 right-3 z-50 max-w-md rounded-2xl border border-border bg-background p-6 shadow-lg">

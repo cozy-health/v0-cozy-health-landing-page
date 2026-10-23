@@ -2,7 +2,8 @@
 const nextConfig = {
   output: 'standalone',
   async headers() {
-    return process.env.COZY_DEPLOYMENT_ENV === 'production' ? [] : [{
+    const guardian = { source: '/guardian-authorization', headers: [{ key: 'Cache-Control', value: 'private, no-store' }, { key: 'Referrer-Policy', value: 'no-referrer' }, { key: 'X-Robots-Tag', value: 'noindex, nofollow' }] }
+    return process.env.COZY_DEPLOYMENT_ENV === 'production' ? [guardian] : [guardian, {
       source: '/:path*',
       headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
     }]

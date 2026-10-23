@@ -20,10 +20,12 @@ for (const document of manifest.documents) {
 }
 const payload = { source_sha256: digest, base_url: manifest.base_url, documents: {}, provider_documents: {}, review_issues: manifest.review_issues }
 for (const doc of manifest.documents) {
-  if (!['tos', 'privacy_policy', 'health_data', 'marketing', 'ugc_guidelines'].includes(doc.id)) continue
+  if (!['tos', 'privacy_policy', 'health_data', 'marketing', 'ugc_guidelines', 'guardians'].includes(doc.id)) continue
   const text = [doc.title, `Version ${doc.version}`, ...doc.sections.flatMap(s => [s.heading, ...s.paragraphs])].join('\n\n')
   const group = doc.audience === 'provider' ? payload.provider_documents : payload.documents
-  group[doc.id] = { title: doc.title, version: doc.version, required: doc.required, published: doc.published, content: text, url: `${manifest.base_url}/legal/${doc.audience}-${doc.id}/${doc.version}` }
+  const entry = { title: doc.title, version: doc.version, required: doc.required, published: doc.published, content: text, url: `${manifest.base_url}/legal/${doc.audience}-${doc.id}/${doc.version}` }
+  if (doc.id === 'guardians') payload.guardian_notice = entry
+  else group[doc.id] = entry
 }
 const outputs = new Map([
  [archivePath, JSON.stringify(archive, null, 2) + '\n'],

@@ -13,6 +13,7 @@ function context(path = '/') {
 test('analytics sends nothing before consent or on sensitive support pages', async () => {
   const first = context(); await first.api.trackWebsite('website_active'); assert.equal(first.captured.length, 0)
   const support = context('/support'); support.api.setAnalyticsChoice(true); await support.api.trackWebsite('website_active'); assert.equal(support.captured.length, 0)
+  const guardian = context('/guardian-authorization'); guardian.api.setAnalyticsChoice(true); await guardian.api.trackWebsite('website_active'); assert.equal(guardian.captured.length, 0)
 })
 test('only selected events are sent and withdrawal deletes identity', async () => {
   const { api, captured, storage } = context(); api.setAnalyticsChoice(true)
