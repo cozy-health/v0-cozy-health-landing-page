@@ -26,22 +26,22 @@ export function Footer() {
             <h4 className="font-semibold text-background mb-4">Product</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-sm text-background/70 hover:text-background transition-colors">
+                <a href="/#individuals" className="text-sm text-background/70 hover:text-background transition-colors">
                   For Individuals
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-background/70 hover:text-background transition-colors">
+                <a href="/#providers" className="text-sm text-background/70 hover:text-background transition-colors">
                   For Providers
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-background/70 hover:text-background transition-colors">
+                <a href="/plans" className="text-sm text-background/70 hover:text-background transition-colors">
                   Pricing
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-background/70 hover:text-background transition-colors">
+                <a href="/#how-it-works" className="text-sm text-background/70 hover:text-background transition-colors">
                   Features
                 </a>
               </li>
@@ -52,22 +52,22 @@ export function Footer() {
             <h4 className="font-semibold text-background mb-4">Community</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-sm text-background/70 hover:text-background transition-colors">
+                <a href="/#impact" className="text-sm text-background/70 hover:text-background transition-colors">
                   Cozy Connect
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-background/70 hover:text-background transition-colors">
+                <a href="/#impact" className="text-sm text-background/70 hover:text-background transition-colors">
                   Mentally Aware
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-background/70 hover:text-background transition-colors">
-                  Blog
+                <a href="/waitlist" className="text-sm text-background/70 hover:text-background transition-colors">
+                  Launch updates
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-background/70 hover:text-background transition-colors">
+                <a href="/health-disclosures" className="text-sm text-background/70 hover:text-background transition-colors">
                   Resources
                 </a>
               </li>
@@ -78,17 +78,17 @@ export function Footer() {
             <h4 className="font-semibold text-background mb-4">Company</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-sm text-background/70 hover:text-background transition-colors">
+                <a href="/#vision" className="text-sm text-background/70 hover:text-background transition-colors">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-background/70 hover:text-background transition-colors">
+                <a href="mailto:Team@cozyhealth.org?subject=Careers%20enquiry" className="text-sm text-background/70 hover:text-background transition-colors">
                   Careers
                 </a>
               </li>
               <li>
-                <a href="mailto:cozyhealth.hq@gmail.com" className="text-sm text-background/70 hover:text-background transition-colors">
+                <a href="mailto:Team@cozyhealth.org" className="text-sm text-background/70 hover:text-background transition-colors">
                   Contact
                 </a>
               </li>

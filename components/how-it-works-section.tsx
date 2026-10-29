@@ -13,7 +13,7 @@ export function HowItWorksSection() {
             How It Works
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            A simple, closed loop, so support never disappears when you need it most.
+            Daily self-care, with provider sharing that stays under your control.
           </p>
         </div>
 
@@ -49,7 +49,7 @@ export function HowItWorksSection() {
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-2">Cozy</h3>
                 <p className="text-center text-muted-foreground text-sm leading-relaxed">
-                  Listens, reflects, and spots what might need attention.
+                  Organizes your saved check-ins and journals for your own reflection.
                 </p>
               </div>
 
@@ -72,7 +72,7 @@ export function HowItWorksSection() {
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-2">Clinician</h3>
                 <p className="text-center text-muted-foreground text-sm leading-relaxed max-w-sm">
-                  Sees the full picture. Steps in earlier. Makes sessions count more.
+                  Reviews only the information you choose to share through an active connection.
                 </p>
               </div>
 
@@ -84,7 +84,7 @@ export function HowItWorksSection() {
             <div className="mt-12 flex justify-center">
               <div className="flex items-center gap-4 px-8 py-4 bg-[#f2cb05]/10 rounded-full border-2 border-[#f2cb05]">
                 <RotateCcw className="w-6 h-6 text-[#f2cb05]" />
-                <span className="font-medium text-foreground">Back to you, faster, kinder, more connected.</span>
+                <span className="font-medium text-foreground">Your information. Your sharing choices.</span>
               </div>
             </div>
           </div>
@@ -112,7 +112,7 @@ export function HowItWorksSection() {
             </div>
             <h3 className="text-lg font-bold text-foreground mb-2">Cozy</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Listens, reflects, and spots what might need attention.
+              Organizes your saved check-ins and journals for your own reflection.
             </p>
           </div>
 
@@ -126,7 +126,7 @@ export function HowItWorksSection() {
             </div>
             <h3 className="text-lg font-bold text-foreground mb-2">Clinician</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Sees the full picture. Steps in earlier. Makes sessions count more.
+              Reviews only the information you choose to share through an active connection.
             </p>
           </div>
 
@@ -135,7 +135,7 @@ export function HowItWorksSection() {
           </div>
 
           <div className="flex items-center justify-center gap-3 px-6 py-4 bg-[#f2cb05]/10 rounded-full border-2 border-[#f2cb05]">
-            <span className="font-medium text-foreground text-center text-sm">Back to you, faster, kinder, more connected.</span>
+            <span className="font-medium text-foreground text-center text-sm">Your information. Your sharing choices.</span>
           </div>
         </div>
       </div>

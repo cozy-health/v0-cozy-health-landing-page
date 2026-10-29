@@ -11,7 +11,7 @@ import { Footer } from "@/components/footer"
 export default function Home() {
   return (
     <main className="min-h-screen bg-background">
-      <Header />
+      <Header providerLoginUrl={process.env.COZY_DEPLOYMENT_ENV === 'production' ? 'https://dashboard.cozyhealth.org/login' : 'https://dashboard-dev.cozyhealth.org/login'} />
       <HeroSection />
       <HowItWorksSection />
       <ForIndividualsSection />
