@@ -20,10 +20,12 @@ for (const document of manifest.documents) {
 }
 const payload = { source_sha256: digest, base_url: manifest.base_url, documents: {}, provider_documents: {}, review_issues: manifest.review_issues }
 for (const doc of manifest.documents) {
-  if (!['tos', 'privacy_policy', 'health_data', 'marketing', 'ugc_guidelines'].includes(doc.id)) continue
-  const text = [doc.title, `Version ${doc.version}`, ...doc.sections.flatMap(s => [s.heading, ...s.paragraphs])].join('\n\n')
+  if (!['tos', 'privacy_policy', 'health_data', 'marketing', 'ugc_guidelines', 'guardians'].includes(doc.id)) continue
+  const text = [doc.title, `Version ${doc.version}`, ...(doc.effective_date ? [`Effective ${doc.effective_date}`] : []), ...doc.sections.flatMap(s => [s.heading, ...s.paragraphs])].join('\n\n')
   const group = doc.audience === 'provider' ? payload.provider_documents : payload.documents
-  group[doc.id] = { title: doc.title, version: doc.version, required: doc.required, published: doc.published, content: text, url: `${manifest.base_url}/legal/${doc.audience}-${doc.id}/${doc.version}` }
+  const entry = { title: doc.title, version: doc.version, required: doc.required, published: doc.published, effective_date: doc.effective_date ?? null, content: text, url: `${manifest.base_url}/legal/${doc.audience}-${doc.id}/${doc.version}` }
+  if (doc.id === 'guardians') payload.guardian_notice = entry
+  else group[doc.id] = entry
 }
 const outputs = new Map([
  [archivePath, JSON.stringify(archive, null, 2) + '\n'],
@@ -31,7 +33,7 @@ const outputs = new Map([
  [path.join(root, 'cozy-health-mobile-app-main-main/assets/legal/documents.json'), source],
 ])
 for (const document of manifest.documents) {
-  const status = document.published ? 'Published' : document.editorial_status === 'final' ? 'Final copy — not yet effective' : 'Review draft'
+  const status = document.published ? `Effective ${document.effective_date ?? document.updated}` : document.editorial_status === 'final' ? 'Final copy — not yet effective' : 'Review draft'
   const markdown = [`<!-- Generated from landing-page lib/legal/documents.json. Edit that source and regenerate. -->`, `# ${document.title}`, `${status} · Version ${document.version} · ${document.updated}`, `Public route: ${manifest.base_url}${document.route}`, ...document.sections.flatMap(section => [`## ${section.heading}`, ...section.paragraphs])].join('\n\n') + '\n'
   outputs.set(path.join(root, 'docs/legal/generated', `${document.audience}-${document.id}.md`), markdown)
 }
