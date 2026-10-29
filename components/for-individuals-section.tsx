@@ -76,11 +76,11 @@ export function ForIndividualsSection() {
             <div className="space-y-3 mt-6">
               <p className="text-sm text-muted-foreground font-medium">Coming soon to</p>
               <div className="flex flex-wrap gap-3">
-                <Button size="lg" className="bg-foreground hover:bg-foreground/90 text-background">
+                <Button disabled size="lg" className="bg-foreground hover:bg-foreground/90 text-background">
                   <SiAppstore className="w-5 h-5 mr-2" />
                   App Store
                 </Button>
-                <Button size="lg" className="bg-foreground hover:bg-foreground/90 text-background">
+                <Button disabled size="lg" className="bg-foreground hover:bg-foreground/90 text-background">
                   <SiGoogleplay className="w-5 h-5 mr-2" />
                   Google Play
                 </Button>

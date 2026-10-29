@@ -25,7 +25,7 @@ export function ForProvidersSection() {
             </h2>
 
             <p className="text-lg text-white/90 leading-relaxed">
-              When an individual adds you as their provider, you get instant access to a dedicated dashboard. Instead of guessing how a patient felt between sessions, you see real patterns:
+              Connected providers can review information a person chooses to share. Optional sharing starts off, and people can change their choices or disconnect their provider.
             </p>
 
             <div className="flex flex-wrap gap-3">
@@ -47,9 +47,8 @@ export function ForProvidersSection() {
               This allows you to <strong className="text-[#f2cb05]">intervene earlier</strong>, <strong className="text-white">respond faster</strong>, and <strong className="text-[#00bc4c]">deliver better care</strong>.
             </p>
 
-            <Button size="lg" className="bg-white text-[#f25c05] hover:bg-white/90 mt-4">
-              Partner With Us
-              <ArrowRight className="w-4 h-4 ml-2" />
+            <Button asChild size="lg" className="bg-white text-[#f25c05] hover:bg-white/90 mt-4">
+              <a href="mailto:Team@cozyhealth.org?subject=Provider%20partnership">Partner With Us<ArrowRight className="w-4 h-4 ml-2" /></a>
             </Button>
           </div>
 
@@ -58,9 +57,10 @@ export function ForProvidersSection() {
               <div className="space-y-4">
                 <div className="flex items-center justify-between mb-6">
                   <h4 className="font-semibold text-white">Patient Dashboard</h4>
-                  <span className="text-sm text-[#00bc4c]">Live</span>
+                  <span className="text-sm text-white">Example</span>
                 </div>
 
+                <p className="text-sm text-white/80">Illustrative preview with sample data. Not a live patient record or clinical alert.</p>
                 <div className="space-y-4">
                   <div className="p-4 bg-white/10 rounded-xl">
                     <div className="flex items-center justify-between mb-2">

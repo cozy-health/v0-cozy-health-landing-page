@@ -19,7 +19,7 @@ export function HeroSection() {
             </h1>
             
             <p className="text-lg sm:text-xl text-muted-foreground max-w-xl leading-relaxed">
-              Continuous care, before, between, and after sessions. A simple, closed loop so support never disappears when you need it most.
+              Make space for daily mood check-ins, journaling and self-care. Choose what to share with a connected provider between sessions.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -29,8 +29,8 @@ export function HeroSection() {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-[#0460d8] text-[#0460d8] hover:bg-[#0460d8]/10">
-                Learn More
+              <Button asChild size="lg" variant="outline" className="border-[#0460d8] text-[#0460d8] hover:bg-[#0460d8]/10">
+                <a href="#how-it-works">Learn More</a>
               </Button>
             </div>
 

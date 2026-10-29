@@ -7,26 +7,19 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.COZY_DEPLOYMENT_ENV === 'production' ? 'https://cozyhealth.org' : 'https://dev.cozyhealth.org'),
   title: 'Cozy Health | Mental Health Care That Stays With You',
   description: 'Continuous mental health care before, between, and after sessions. Cozy bridges patients and providers with self-care tools, mood tracking, and personal insights.',
-  generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: { url: '/logo.png', type: 'image/png' },
+    apple: '/logo.png',
   },
+  openGraph: {
+    title: 'Cozy Health',
+    description: 'Mood tracking, journaling and care you choose to share.',
+    images: [{ url: '/logo.png', width: 500, height: 500, alt: 'Cozy Health logo' }],
+  },
+  twitter: { card: 'summary', images: ['/logo.png'] },
 }
 
 export default function RootLayout({
