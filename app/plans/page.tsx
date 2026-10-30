@@ -8,7 +8,7 @@ export const metadata = { title: 'Plans | Cozy Health' }
 const plans = [
   { name: 'Standard', eyebrow: 'Your daily foundation', icon: Heart, description: 'A little space to check in, reflect and find your rhythm.', features: ['Written journals', 'Mood tracking and streaks', 'Read-only community access'], featured: false },
   { name: 'Student', eyebrow: 'Room to grow', icon: GraduationCap, description: 'All Premium benefits, with eligibility for current students.', features: ['Everything in Premium', 'Student eligibility reviewed by Cozy', 'Current enrolment evidence required'], featured: false },
-  { name: 'Premium', eyebrow: 'More ways to feel supported', icon: Sparkles, description: 'Your self-care toolkit, with a provider connection when you choose.', features: ['Written and voice journals', 'Connect and chat with a provider', 'Assessments and full community access'], featured: true },
+  { name: 'Premium', eyebrow: 'More ways to feel supported', icon: Sparkles, description: 'Your self-care toolkit, with a provider connection when you choose.', features: ['Written and voice journals', 'Connect and chat with a provider', 'Assessments and challenges', 'Trends and insights dashboard', 'Full community access'], featured: true },
 ]
 
 const comparison = [
@@ -17,7 +17,8 @@ const comparison = [
   { feature: 'Emergency resources', included: [true, true, true] },
   { feature: 'Voice journals', included: [false, true, true] },
   { feature: 'Provider connection & chat', included: [false, true, true] },
-  { feature: 'Assessments', included: [false, true, true] },
+  { feature: 'Assessments and challenges', included: [false, true, true] },
+  { feature: 'Trends and insights dashboard', included: [false, true, true] },
   { feature: 'Full community participation', included: [false, true, true] },
 ]
 
