@@ -16,8 +16,9 @@ test('current documents have the approved effective date without erasing operati
   for (const doc of manifest.documents) {
     assert.equal(doc.editorial_status, 'final')
     assert.equal(doc.published, true)
-    assert.equal(doc.effective_date, '2026-10-29')
-    assert.equal(doc.version, '1.1')
+    const revisedTerms = doc.id === 'tos' && doc.audience === 'consumer'
+    assert.equal(doc.effective_date, revisedTerms ? '2026-10-30' : '2026-10-29')
+    assert.equal(doc.version, revisedTerms ? '1.2' : '1.1')
   }
   for (const route of ['/support', '/cookies', '/health-disclosures', '/community-standards']) {
     assert.equal(manifest.documents.find(doc => doc.route === route)?.published, true)
@@ -47,4 +48,17 @@ test('current legal copy describes confirmed written sharing and immediate/14-da
 })
 test('website legal version archive matches the publication source', () => {
   execFileSync(process.execPath, ['scripts/sync-legal.mjs','--check'], { cwd: new URL('..', import.meta.url) })
+})
+
+test('revised Terms use approved store age controls and preserve the previous published Terms', () => {
+  const terms = manifest.documents.find(doc => doc.id === 'tos' && doc.audience === 'consumer')
+  assert.match(JSON.stringify(terms.sections), /people aged 13 and older/)
+  assert.match(JSON.stringify(terms.sections), /does not operate a custom date-of-birth or guardian-authorization workflow/)
+  assert.match(JSON.stringify(terms.sections), /Separate health-data consent remains required/)
+  assert.doesNotMatch(JSON.stringify(terms.sections), /require the applicable verified guardian authorization/)
+  const archive = JSON.parse(fs.readFileSync(new URL('../lib/legal/versions.json', import.meta.url)))
+  const previous = archive.find(doc => doc.id === 'tos' && doc.audience === 'consumer' && doc.version === '1.1')
+  assert.equal(previous.published, true)
+  assert.equal(previous.effective_date, '2026-10-29')
+  assert.match(JSON.stringify(previous.sections), /verified guardian authorization/)
 })
