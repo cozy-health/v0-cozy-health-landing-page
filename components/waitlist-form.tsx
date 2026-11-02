@@ -13,9 +13,11 @@ export function WaitlistForm() {
     const form = event.currentTarget
 
     try {
+      const data = new FormData(form)
+      data.set("is_provider", data.get("is_provider") === "Yes" ? "Yes" : "No")
       const response = await fetch("https://formspree.io/f/xjyvwkpj", {
         method: "POST",
-        body: new FormData(form),
+        body: data,
         headers: { Accept: "application/json" },
       })
 
@@ -49,8 +51,12 @@ export function WaitlistForm() {
         <label htmlFor="email" className="text-sm font-medium text-foreground">Email address</label>
         <input id="email" name="email" type="email" required autoComplete="email" className="flex h-12 w-full rounded-xl border border-input bg-background px-4 text-foreground outline-none transition focus:border-[#0460d8] focus:ring-2 focus:ring-[#0460d8]/20" />
       </div>
+      <label htmlFor="is-provider" className="flex min-h-12 cursor-pointer items-center gap-3 rounded-xl text-sm font-medium text-foreground">
+        <input id="is-provider" name="is_provider" type="checkbox" value="Yes" className="h-5 w-5 shrink-0 rounded border-input accent-[#0460d8] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0460d8]" />
+        I am a healthcare provider
+      </label>
       {status === "error" && <p className="text-sm text-[#f25c05]" role="alert">Something went wrong. Please try again.</p>}
-      <p className="text-sm text-muted-foreground">We use your name and email to respond to your waitlist request through Formspree. <a href="/privacy" className="underline">Privacy Policy</a>.</p>
+      <p className="text-sm text-muted-foreground">We use your name, email and provider status to respond to your waitlist request through Formspree. <a href="/privacy" className="underline">Privacy Policy</a>.</p>
       <Button type="submit" size="lg" disabled={status === "pending"} className="w-full bg-[#0460d8] text-white hover:bg-[#0460d8]/90">
         {status === "pending" ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" />Joining...</> : <>Join the Waitlist<ArrowRight className="ml-2 h-4 w-4" /></>}
       </Button>
