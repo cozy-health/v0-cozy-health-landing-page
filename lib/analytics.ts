@@ -17,13 +17,13 @@ export function setAnalyticsChoice(enabled: boolean) {
 export async function trackWebsite(event: string) {
   const token = process.env.NEXT_PUBLIC_POSTHOG_KEY
   const host = process.env.NEXT_PUBLIC_POSTHOG_HOST
-  if (!token || !host || !['https://eu.i.posthog.com', 'https://us.i.posthog.com'].includes(host) || !allowed.has(event) || analyticsChoice() !== true || location.pathname !== '/') return
+  if (!['dev.cozyhealth.org', 'localhost', '127.0.0.1'].includes(location.hostname) || !token || !host || !['https://eu.i.posthog.com', 'https://us.i.posthog.com'].includes(host) || !allowed.has(event) || analyticsChoice() !== true || location.pathname !== '/') return
   try {
     let id = localStorage.getItem(identityKey)
     if (!id) { id = crypto.randomUUID(); localStorage.setItem(identityKey, id) }
     pending?.abort()
     pending = new AbortController()
     await fetch(`${host}/i/v0/e/`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'omit', referrerPolicy: 'no-referrer', signal: pending.signal,
-      body: JSON.stringify({ api_key: token, event, properties: { distinct_id: id, platform: 'web', $process_person_profile: false, $geoip_disable: true } }) })
+      body: JSON.stringify({ api_key: token, event, properties: { distinct_id: id, platform: 'web', environment: 'development', $process_person_profile: false, $geoip_disable: true } }) })
   } catch { /* Optional analytics never prevents site use; no retry queue. */ }
 }
