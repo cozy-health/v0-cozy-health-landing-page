@@ -150,14 +150,14 @@ for (const route of ['/', '/plans', '/waitlist', '/legal']) {
       const contrast = violations.filter(v => v.id === 'color-contrast').flatMap(v => v.nodes.map(normalizeContrast))
       const expected = contrastBaseline[route]?.[String(width)]
       if (!expected) throw new Error(`Missing original brand baseline for ${route} at ${width}px`)
-      // WebKit rounds one channel of the original 10% green badge differently.
+      // WebKit has recorded one-channel compositing differences by platform.
       // Keep its observed diagnostic exact instead of ignoring or fuzzing contrast.
       const engineExpected = testInfo.project.name === 'webkit' ? expected.map(node => {
-        const rendering = originalBrandContrast.webkitColorRendering.find(item => item.html === node.html && item.chromiumSummary === node.summary)
+        const rendering = originalBrandContrast.webkitColorRendering.find(item => item.platforms.includes(process.platform) && item.html === node.html && item.chromiumSummary === node.summary)
         return rendering ? { html: node.html, summary: rendering.webkitSummary } : node
       }) : expected
       await testInfo.attach(`contrast-findings-${width}`, { body: JSON.stringify(contrast, null, 2), contentType: 'application/json' })
-      expect(orderContrast(contrast), `Original contrast findings for ${route} at ${width}px`).toEqual(orderContrast(engineExpected))
+      expect.soft(orderContrast(contrast), `Original contrast findings for ${route} at ${width}px`).toEqual(orderContrast(engineExpected))
     }
   })
 }
