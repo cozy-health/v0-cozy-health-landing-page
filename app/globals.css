@@ -4,9 +4,6 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --success-ink: #006b2b;
-  --warm-ink: #a63b00;
-  --link-ink: #034cae;
   --background: oklch(0.99 0.002 240);
   --foreground: oklch(0.18 0.02 250);
   --card: oklch(1 0 0);
@@ -43,9 +40,6 @@
 }
 
 .dark {
-  --success-ink: #62e89a;
-  --warm-ink: #ffb58c;
-  --link-ink: #9bc4ff;
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.145 0 0);
@@ -81,9 +75,6 @@
 }
 
 @theme inline {
-  --color-success-ink: var(--success-ink);
-  --color-warm-ink: var(--warm-ink);
-  --color-link-ink: var(--link-ink);
   --font-sans: 'Geist', 'Geist Fallback';
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);

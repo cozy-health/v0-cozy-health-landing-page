@@ -40,11 +40,11 @@ export function HeroSection() {
                 <span className="text-sm text-muted-foreground">At your pace</span>
               </div>
               <div className="flex flex-col gap-1">
-                <span className="text-2xl font-bold text-success-ink">Real-time</span>
+                <span className="text-2xl font-bold text-[#00bc4c]">Real-time</span>
                 <span className="text-sm text-muted-foreground">Mood Tracking</span>
               </div>
               <div className="flex flex-col gap-1">
-                <span className="text-2xl font-bold text-warm-ink">Proactive</span>
+                <span className="text-2xl font-bold text-[#f25c05]">Proactive</span>
                 <span className="text-sm text-muted-foreground">Personal Reflection</span>
               </div>
             </div>
