@@ -10,7 +10,9 @@ Railway's GitHub integration has access to this repository, and both environment
 
 The Dockerfile builds with Node.js 22 and runs the Next.js standalone server as a non-root user. Railway supplies `PORT`; the default is 8080. The health check is `/`. Analytics keys remain unset.
 
-Before releasing, run `npm run typecheck`, `npm run legal:check`, `npm test`, and `npm run build`. When sibling repositories are available, also run `npm run legal:check -- --workspace`. Push development changes to `develop`, then merge a passing release PR to `main` for production.
+Before releasing, run `npm run typecheck`, `npm run legal:check`, `npm test`, `npm run build`, and `npm run test:ui`. When sibling repositories are available, also run `npm run legal:check -- --workspace`. Push development changes to `develop`; production merges require explicit owner authorization for that release.
+
+Install the browser test engines once with `npx playwright install chromium webkit` (add `--with-deps` on Linux). UI tests start the built website locally and cover responsive layouts, enlarged text, keyboard navigation, consent, contrast and intercepted waitlist submissions in Chromium and WebKit. Set `PLAYWRIGHT_BASE_URL` to test an existing development preview instead; set `PLAYWRIGHT_EXPECT_PRODUCTION=1` only when checking a production-configured local build's provider-login destination. Physical-device Safari acceptance remains separate from WebKit automation.
 
 Development preview: https://cozy-health-website-production.up.railway.app. Production preview: https://cozy-health-website-production-a679.up.railway.app.
 

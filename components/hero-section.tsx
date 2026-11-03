@@ -4,7 +4,7 @@ import { ArrowRight, Heart, Shield, Users } from "lucide-react"
 
 export function HeroSection() {
   return (
-    <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="pt-16 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
@@ -34,17 +34,17 @@ export function HeroSection() {
               </Button>
             </div>
 
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-border">
               <div className="flex flex-col gap-1">
                 <span className="text-2xl font-bold text-[#0460d8]">Self-care</span>
                 <span className="text-sm text-muted-foreground">At your pace</span>
               </div>
               <div className="flex flex-col gap-1">
-                <span className="text-2xl font-bold text-[#00bc4c]">Real-time</span>
+                <span className="text-2xl font-bold text-success-ink">Real-time</span>
                 <span className="text-sm text-muted-foreground">Mood Tracking</span>
               </div>
               <div className="flex flex-col gap-1">
-                <span className="text-2xl font-bold text-[#f25c05]">Proactive</span>
+                <span className="text-2xl font-bold text-warm-ink">Proactive</span>
                 <span className="text-sm text-muted-foreground">Personal Reflection</span>
               </div>
             </div>

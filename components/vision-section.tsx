@@ -44,14 +44,14 @@ export function VisionSection() {
 
           {/* Mission */}
           <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00bc4c]/10 text-[#00bc4c] text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00bc4c]/10 text-success-ink text-sm font-medium">
               <Target className="w-4 h-4" />
               <span>Our Mission</span>
             </div>
             
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground text-balance">
               Transform Global Mental Health Through{" "}
-              <span className="text-[#00bc4c]">Continuous Care</span>
+              <span className="text-success-ink">Continuous Care</span>
             </h2>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -62,7 +62,7 @@ export function VisionSection() {
               {missionPoints.map((point, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-[#00bc4c]/10 flex items-center justify-center shrink-0 mt-0.5">
-                    <Check className="w-3 h-3 text-[#00bc4c]" />
+                    <Check className="w-3 h-3 text-success-ink" />
                   </div>
                   <p className="text-muted-foreground leading-relaxed">{point}</p>
                 </div>

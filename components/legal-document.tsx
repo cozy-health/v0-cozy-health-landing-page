@@ -7,6 +7,10 @@ export function LegalDocument({ document, archived = false }: { document: Docume
     <Link href="/" className="inline-flex items-center gap-3 font-semibold"><Image src="/logo.png" alt="" width={36} height={36} />Cozy Health</Link>
     <div className="mt-14 grid gap-12 pb-24 md:grid-cols-[220px_1fr]"><aside className="md:sticky md:top-8 md:self-start">
       <Link href="/legal" className="text-sm font-medium text-[#0460d8]">← Policies & trust</Link>
+      <details className="mt-6 rounded-xl border border-border p-4 md:hidden">
+        <summary className="cursor-pointer font-semibold">On this page</summary>
+        <nav aria-label="Document sections" className="mt-4 flex flex-col gap-3 text-sm text-muted-foreground">{document.sections.map((section, i) => <a key={section.heading} href={`#section-${i + 1}`} className="py-1 hover:text-foreground focus-visible:underline">{section.heading}</a>)}</nav>
+      </details>
       <p className="mb-4 mt-8 hidden text-xs font-semibold uppercase tracking-[.18em] text-muted-foreground md:block">On this page</p>
       <nav aria-label="Document sections" className="hidden flex-col gap-3 border-l border-border pl-4 text-sm text-muted-foreground md:flex">{document.sections.map((section, i) => <a key={section.heading} href={`#section-${i + 1}`} className="hover:text-foreground focus-visible:underline">{section.heading}</a>)}</nav>
     </aside><article className="max-w-3xl">

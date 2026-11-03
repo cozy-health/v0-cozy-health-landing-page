@@ -23,7 +23,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-background mb-4">Product</h4>
+            <h3 className="font-semibold text-background mb-4">Product</h3>
             <ul className="space-y-3">
               <li>
                 <a href="/#individuals" className="text-sm text-background/70 hover:text-background transition-colors">
@@ -49,7 +49,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-background mb-4">Community</h4>
+            <h3 className="font-semibold text-background mb-4">Community</h3>
             <ul className="space-y-3">
               <li>
                 <a href="/#impact" className="text-sm text-background/70 hover:text-background transition-colors">
@@ -75,7 +75,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-background mb-4">Company</h4>
+            <h3 className="font-semibold text-background mb-4">Company</h3>
             <ul className="space-y-3">
               <li>
                 <a href="/#vision" className="text-sm text-background/70 hover:text-background transition-colors">

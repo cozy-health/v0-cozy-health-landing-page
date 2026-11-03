@@ -34,27 +34,7 @@ export function ForIndividualsSection() {
     <section id="individuals" className="py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="order-2 lg:order-1">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="p-6 bg-card rounded-2xl border border-border hover:shadow-lg transition-shadow"
-                >
-                  <div
-                    className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
-                    style={{ backgroundColor: `${feature.color}15` }}
-                  >
-                    <feature.icon className="w-6 h-6" style={{ color: feature.color }} />
-                  </div>
-                  <h4 className="font-semibold text-foreground mb-2">{feature.title}</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="order-1 lg:order-2 space-y-6">
+          <div className="lg:order-2 space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0460d8]/10 text-[#0460d8] text-sm font-medium">
               <Sparkles className="w-4 h-4" />
               <span>For Individuals</span>
@@ -77,16 +57,37 @@ export function ForIndividualsSection() {
               <p className="text-sm text-muted-foreground font-medium">Coming soon to</p>
               <div className="flex flex-wrap gap-3">
                 <Button disabled size="lg" className="bg-foreground hover:bg-foreground/90 text-background">
-                  <SiAppstore className="w-5 h-5 mr-2" />
+                  <SiAppstore aria-hidden="true" className="w-5 h-5 mr-2" />
                   App Store
                 </Button>
                 <Button disabled size="lg" className="bg-foreground hover:bg-foreground/90 text-background">
-                  <SiGoogleplay className="w-5 h-5 mr-2" />
+                  <SiGoogleplay aria-hidden="true" className="w-5 h-5 mr-2" />
                   Google Play
                 </Button>
               </div>
             </div>
           </div>
+
+          <div className="lg:order-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className="p-6 bg-card rounded-2xl border border-border hover:shadow-lg transition-shadow"
+                >
+                  <div
+                    className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
+                    style={{ backgroundColor: `${feature.color}15` }}
+                  >
+                    <feature.icon className="w-6 h-6" style={{ color: feature.color }} />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">{feature.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
