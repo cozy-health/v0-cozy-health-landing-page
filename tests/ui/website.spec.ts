@@ -1,9 +1,18 @@
 import { test, expect, type Page } from '@playwright/test'
 import { resolve } from 'node:path'
+import originalBrandContrast from '../fixtures/original-brand-contrast.json'
 
 declare global {
   interface Window { axe: typeof import('axe-core') }
 }
+
+type ContrastFinding = { html: string; summary: string }
+const contrastBaseline: Record<string, Record<string, ContrastFinding[]>> = originalBrandContrast.findings
+const normalizeContrast = (node: { html: string; summary?: string }): ContrastFinding => ({
+  html: node.html.replace(/<(\/?)h[1-6](?=[\s>])/g, '<$1heading').replace(/\s+/g, ' ').trim(),
+  summary: (node.summary ?? '').replace(/\s+/g, ' ').trim(),
+})
+const orderContrast = (nodes: ContrastFinding[]) => [...nodes].sort((a, b) => (a.html + a.summary).localeCompare(b.html + b.summary))
 
 test.beforeEach(async ({ page }) => {
   await page.addInitScript(() => {
@@ -49,6 +58,28 @@ test('header adapts to enlarged text without overlapping navigation', async ({ p
   await expect(toggle).toBeVisible()
   await noPageOverflow(page)
   expect(await page.getByRole('link', { name: 'Cozy Health home' }).evaluate(el => el.getBoundingClientRect().right)).toBeLessThan(await toggle.evaluate(el => el.getBoundingClientRect().left))
+})
+
+test('original brand palette and translucent provider preview are preserved', async ({ page }) => {
+  await page.goto('/')
+  await expect(page.locator('#providers')).toHaveCSS('background-color', 'rgb(242, 92, 5)')
+  await expect(page.locator('#providers h2')).toHaveCSS('color', 'rgb(255, 255, 255)')
+  await expect(page.locator('#providers h2 span')).toHaveCSS('color', 'rgb(242, 203, 5)')
+  await expect(page.getByText('Proactive', { exact: true })).toHaveCSS('color', 'rgb(242, 92, 5)')
+  await expect(page.getByText('Real-time', { exact: true })).toHaveCSS('color', 'rgb(0, 188, 76)')
+  await expect(page.locator('#impact h2 span')).toHaveCSS('color', 'rgb(242, 92, 5)')
+  const pixel = await page.locator('#providers .backdrop-blur-sm.rounded-3xl').evaluate(el => {
+    const canvas = document.createElement('canvas'); canvas.width = 1; canvas.height = 1
+    const context = canvas.getContext('2d')
+    if (!context) throw new Error('Canvas unavailable for color verification')
+    context.fillStyle = getComputedStyle(el).backgroundColor
+    context.fillRect(0, 0, 1, 1)
+    return [...context.getImageData(0, 0, 1, 1).data]
+  })
+  expect(pixel.slice(0, 3)).toEqual([255, 255, 255])
+  const alpha = pixel[3]
+  if (alpha === undefined) throw new Error('Missing preview alpha')
+  expect(Math.abs(alpha - 25.5)).toBeLessThanOrEqual(0.5)
 })
 
 test('mobile navigation supports Escape, short screens, anchors and correct login environment', async ({ page }) => {
@@ -103,7 +134,7 @@ test('privacy preferences persist and reopen with focus without covering page co
 })
 
 for (const route of ['/', '/plans', '/waitlist', '/legal']) {
-  test(`accessible page ${route}`, async ({ page }) => {
+  test(`page semantics and original palette contrast ${route}`, async ({ page }, testInfo) => {
     for (const width of [390, 1440]) {
       await page.setViewportSize({ width, height: 900 })
       await page.goto(route)
@@ -112,7 +143,21 @@ for (const route of ['/', '/plans', '/waitlist', '/legal']) {
         const result = await window.axe.run(document, { runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa', 'wcag21aa', 'best-practice'] } })
         return result.violations.map(v => ({ id: v.id, nodes: v.nodes.map(n => ({ html: n.html, summary: n.failureSummary })) }))
       })
-      expect(violations, `${route} at ${width}px`).toEqual([])
+      // Owner requested the original palette/contrast after reviewing the fixes.
+      // Keep every rule active and compare all original contrast findings exactly.
+      // This is a recorded design baseline, not a claim that those contrasts pass.
+      expect(violations.filter(v => v.id !== 'color-contrast'), `${route} at ${width}px`).toEqual([])
+      const contrast = violations.filter(v => v.id === 'color-contrast').flatMap(v => v.nodes.map(normalizeContrast))
+      const expected = contrastBaseline[route]?.[String(width)]
+      if (!expected) throw new Error(`Missing original brand baseline for ${route} at ${width}px`)
+      // WebKit rounds one channel of the original 10% green badge differently.
+      // Keep its observed diagnostic exact instead of ignoring or fuzzing contrast.
+      const engineExpected = testInfo.project.name === 'webkit' ? expected.map(node => {
+        const rendering = originalBrandContrast.webkitColorRendering.find(item => item.html === node.html && item.chromiumSummary === node.summary)
+        return rendering ? { html: node.html, summary: rendering.webkitSummary } : node
+      }) : expected
+      await testInfo.attach(`contrast-findings-${width}`, { body: JSON.stringify(contrast, null, 2), contentType: 'application/json' })
+      expect(orderContrast(contrast), `Original contrast findings for ${route} at ${width}px`).toEqual(orderContrast(engineExpected))
     }
   })
 }

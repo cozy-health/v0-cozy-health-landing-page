@@ -9,7 +9,7 @@ export function HowItWorksSection() {
   return <section id="how-it-works" className="py-24 px-4 sm:px-6 lg:px-8 bg-card">
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-16">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00bc4c]/10 text-success-ink text-sm font-medium mb-6"><RotateCcw className="w-4 h-4" aria-hidden="true" /><span>Continuous Care Ecosystem</span></div>
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00bc4c]/10 text-[#00bc4c] text-sm font-medium mb-6"><RotateCcw className="w-4 h-4" aria-hidden="true" /><span>Continuous Care Ecosystem</span></div>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">How It Works</h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">Daily self-care, with provider sharing that stays under your control.</p>
       </div>
