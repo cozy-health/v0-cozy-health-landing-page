@@ -9,7 +9,7 @@ permissions:
 jobs:
   web:
     name: Website release checks
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
@@ -23,3 +23,15 @@ jobs:
       - run: npm run build
         env:
           COZY_DEPLOYMENT_ENV: production
+      - run: npx playwright install --with-deps chromium webkit
+      - run: npm run test:ui
+        env:
+          PLAYWRIGHT_EXPECT_PRODUCTION: '1'
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: website-ui-results
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 7

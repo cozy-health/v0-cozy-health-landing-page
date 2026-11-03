@@ -1,0 +1,303 @@
+{
+  "sourceCommit": "65a055af41160e7dd6665248e500bbe55e007629",
+  "webkitColorRendering": [
+    {
+      "platforms": ["win32", "linux"],
+      "html": "<span>Continuous Care Ecosystem</span>",
+      "chromiumSummary": "Fix any of the following: Element has insufficient color contrast of 2.29 (foreground color: #00bc4c, background color: #e6f8ed, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "webkitSummary": "Fix any of the following: Element has insufficient color contrast of 2.28 (foreground color: #00bc4c, background color: #e5f8ed, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+    },
+    {
+      "platforms": ["linux"],
+      "html": "<span class=\"text-sm text-white/70\">and so much more!</span>",
+      "chromiumSummary": "Fix any of the following: Element has insufficient color contrast of 2.17 (foreground color: #fbd3bb, background color: #f36c1e, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "webkitSummary": "Fix any of the following: Element has insufficient color contrast of 2.17 (foreground color: #fbd3bc, background color: #f36c1e, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+    }
+  ],
+  "findings": {
+    "/": {
+      "390": [
+        {
+          "html": "<span class=\"text-2xl font-bold text-[#00bc4c]\">Real-time</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.46 (foreground color: #00bc4c, background color: #fbfcfd, font size: 18.0pt (24px), font weight: bold). Expected contrast ratio of 3:1"
+        },
+        {
+          "html": "<span>Continuous Care Ecosystem</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.29 (foreground color: #00bc4c, background color: #e6f8ed, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span>For Providers</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.01 (foreground color: #ffffff, background color: #f36c1e, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-[#f2cb05]\">digital co-pilot</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.11 (foreground color: #f2cb05, background color: #f25c05, font size: 22.5pt (30px), font weight: bold). Expected contrast ratio of 3:1"
+        },
+        {
+          "html": "<p class=\"text-lg text-white/90 leading-relaxed\">Connected providers can review information a person chooses to share. Optional sharing starts off, and people can change their choices or disconnect their provider.</p>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.96 (foreground color: #feefe6, background color: #f25c05, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-sm text-white\">Mood Changes</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.01 (foreground color: #ffffff, background color: #f36c1e, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-sm text-white\">Trigger Patterns</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.01 (foreground color: #ffffff, background color: #f36c1e, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-sm text-white\">Early Warning Signs</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.01 (foreground color: #ffffff, background color: #f36c1e, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-sm text-white\">Coping Progress</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.01 (foreground color: #ffffff, background color: #f36c1e, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-sm text-white/70\">and so much more!</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.17 (foreground color: #fbd3bb, background color: #f36c1e, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<p class=\"text-lg text-white leading-relaxed\">This allows you to <strong class=\"text-[#f2cb05]\">intervene earlier</strong>, <strong class=\"text-white\">respond faster</strong>, and <strong class=\"text-[#00bc4c]\">deliver better care</strong>.</p>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.32 (foreground color: #ffffff, background color: #f25c05, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<strong class=\"text-[#f2cb05]\">intervene earlier</strong>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.11 (foreground color: #f2cb05, background color: #f25c05, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<strong class=\"text-white\">respond faster</strong>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.32 (foreground color: #ffffff, background color: #f25c05, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<strong class=\"text-[#00bc4c]\">deliver better care</strong>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 1.31 (foreground color: #00bc4c, background color: #f25c05, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<a href=\"mailto:Team@cozyheal...\" data-slot=\"button\" class=\"inline-flex items-ce...\">",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.32 (foreground color: #f25c05, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<heading class=\"font-semibold text-white\">Patient Dashboard</heading>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.01 (foreground color: #ffffff, background color: #f36c1e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<p class=\"text-sm text-white/80\">Illustrative preview with sample data. Not a live patient record or clinical alert.</p>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.43 (foreground color: #fde2d2, background color: #f36c1e, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-sm text-white/70\">Weekly Mood Trend</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.02 (foreground color: #fcd7c2, background color: #f47b35, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-sm font-medium text-[#00bc4c]\">+15%</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 1.07 (foreground color: #00bc4c, background color: #f47b35, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-sm text-white/70\">Check-in Consistency</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.02 (foreground color: #fcd7c2, background color: #f47b35, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-sm font-medium text-white\">92%</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.71 (foreground color: #ffffff, background color: #f47b35, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-sm font-medium text-white\">Attention Flag</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.06 (foreground color: #ffffff, background color: #f36919, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<p class=\"text-sm text-white/70\">Sleep pattern disruption detected over past 3 days</p>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.19 (foreground color: #fbd2ba, background color: #f36919, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<p class=\"text-xs text-white/70\">Triggers</p>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.02 (foreground color: #fcd7c2, background color: #f47b35, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<p class=\"text-xs text-white/70\">Days Streak</p>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.02 (foreground color: #fcd7c2, background color: #f47b35, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span>Our Impact</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.96 (foreground color: #f25c05, background color: #feefe6, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span>Our Mission</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.24 (foreground color: #00bc4c, background color: #e2f6eb, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-[#00bc4c]\">Continuous Care</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.46 (foreground color: #00bc4c, background color: #fbfcfd, font size: 22.5pt (30px), font weight: bold). Expected contrast ratio of 3:1"
+        }
+      ],
+      "1440": [
+        {
+          "html": "<span class=\"text-2xl font-bold text-[#00bc4c]\">Real-time</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.46 (foreground color: #00bc4c, background color: #fbfcfd, font size: 18.0pt (24px), font weight: bold). Expected contrast ratio of 3:1"
+        },
+        {
+          "html": "<span>Continuous Care Ecosystem</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.29 (foreground color: #00bc4c, background color: #e6f8ed, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span>For Providers</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.01 (foreground color: #ffffff, background color: #f36c1e, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-[#f2cb05]\">digital co-pilot</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.11 (foreground color: #f2cb05, background color: #f25c05, font size: 36.0pt (48px), font weight: bold). Expected contrast ratio of 3:1"
+        },
+        {
+          "html": "<p class=\"text-lg text-white/90 leading-relaxed\">Connected providers can review information a person chooses to share. Optional sharing starts off, and people can change their choices or disconnect their provider.</p>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.96 (foreground color: #feefe6, background color: #f25c05, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-sm text-white\">Mood Changes</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.01 (foreground color: #ffffff, background color: #f36c1e, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-sm text-white\">Trigger Patterns</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.01 (foreground color: #ffffff, background color: #f36c1e, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-sm text-white\">Early Warning Signs</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.01 (foreground color: #ffffff, background color: #f36c1e, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-sm text-white\">Coping Progress</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.01 (foreground color: #ffffff, background color: #f36c1e, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-sm text-white/70\">and so much more!</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.17 (foreground color: #fbd3bb, background color: #f36c1e, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<p class=\"text-lg text-white leading-relaxed\">This allows you to <strong class=\"text-[#f2cb05]\">intervene earlier</strong>, <strong class=\"text-white\">respond faster</strong>, and <strong class=\"text-[#00bc4c]\">deliver better care</strong>.</p>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.32 (foreground color: #ffffff, background color: #f25c05, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<strong class=\"text-[#f2cb05]\">intervene earlier</strong>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.11 (foreground color: #f2cb05, background color: #f25c05, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<strong class=\"text-white\">respond faster</strong>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.32 (foreground color: #ffffff, background color: #f25c05, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<strong class=\"text-[#00bc4c]\">deliver better care</strong>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 1.31 (foreground color: #00bc4c, background color: #f25c05, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<a href=\"mailto:Team@cozyheal...\" data-slot=\"button\" class=\"inline-flex items-ce...\">",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.32 (foreground color: #f25c05, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<heading class=\"font-semibold text-white\">Patient Dashboard</heading>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.01 (foreground color: #ffffff, background color: #f36c1e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<p class=\"text-sm text-white/80\">Illustrative preview with sample data. Not a live patient record or clinical alert.</p>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.43 (foreground color: #fde2d2, background color: #f36c1e, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-sm text-white/70\">Weekly Mood Trend</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.02 (foreground color: #fcd7c2, background color: #f47b35, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-sm font-medium text-[#00bc4c]\">+15%</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 1.07 (foreground color: #00bc4c, background color: #f47b35, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-sm text-white/70\">Check-in Consistency</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.02 (foreground color: #fcd7c2, background color: #f47b35, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-sm font-medium text-white\">92%</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.71 (foreground color: #ffffff, background color: #f47b35, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-sm font-medium text-white\">Attention Flag</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.06 (foreground color: #ffffff, background color: #f36919, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<p class=\"text-sm text-white/70\">Sleep pattern disruption detected over past 3 days</p>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.19 (foreground color: #fbd2ba, background color: #f36919, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<p class=\"text-2xl font-bold text-white\">14</p>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.71 (foreground color: #ffffff, background color: #f47b35, font size: 18.0pt (24px), font weight: bold). Expected contrast ratio of 3:1"
+        },
+        {
+          "html": "<p class=\"text-xs text-white/70\">Check-ins</p>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.02 (foreground color: #fcd7c2, background color: #f47b35, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<p class=\"text-xs text-white/70\">Triggers</p>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.02 (foreground color: #fcd7c2, background color: #f47b35, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<p class=\"text-xs text-white/70\">Days Streak</p>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.02 (foreground color: #fcd7c2, background color: #f47b35, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span>Our Impact</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.96 (foreground color: #f25c05, background color: #feefe6, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span>Our Mission</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.24 (foreground color: #00bc4c, background color: #e2f6eb, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-[#00bc4c]\">Continuous Care</span>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.46 (foreground color: #00bc4c, background color: #fbfcfd, font size: 27.0pt (36px), font weight: bold). Expected contrast ratio of 3:1"
+        }
+      ]
+    },
+    "/plans": {
+      "390": [
+        {
+          "html": "<p class=\"inline-flex items-center gap-2 rounded-full bg-[#0460d8]/10 px-4 py-2 text-sm font-medium text-[#0460d8]\">",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 4.49 (foreground color: #0460d8, background color: #d8e5f8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<p class=\"text-xs font-semibold uppercase tracking-[.16em] text-white/75\">More ways to feel supported</p>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.89 (foreground color: #c0d7f5, background color: #0460d8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<p class=\"text-sm font-semibold uppercase tracking-[.16em] text-[#f25c05]\">The details, made simple</p>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.24 (foreground color: #f25c05, background color: #fbfcfd, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<p class=\"text-sm font-semibold text-[#008937]\">A kinder daily rhythm</p>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 4.41 (foreground color: #008937, background color: #fbfcfd, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "1440": [
+        {
+          "html": "<p class=\"inline-flex items-center gap-2 rounded-full bg-[#0460d8]/10 px-4 py-2 text-sm font-medium text-[#0460d8]\">",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 4.49 (foreground color: #0460d8, background color: #d8e5f8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<p class=\"text-xs font-semibold uppercase tracking-[.16em] text-white/75\">More ways to feel supported</p>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.89 (foreground color: #c0d7f5, background color: #0460d8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<p class=\"text-sm font-semibold uppercase tracking-[.16em] text-[#f25c05]\">The details, made simple</p>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.24 (foreground color: #f25c05, background color: #fbfcfd, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<p class=\"text-sm font-semibold text-[#008937]\">A kinder daily rhythm</p>",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 4.41 (foreground color: #008937, background color: #fbfcfd, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    "/waitlist": {
+      "390": [],
+      "1440": []
+    },
+    "/legal": {
+      "390": [],
+      "1440": []
+    }
+  }
+}

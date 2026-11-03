@@ -57,7 +57,8 @@ export default function PlansPage() {
     <section className="mx-auto max-w-5xl px-5 py-20 sm:px-8">
       <p className="text-sm font-semibold uppercase tracking-[.16em] text-[#f25c05]">The details, made simple</p>
       <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Find your kind of care.</h2>
-      <div className="mt-8 overflow-x-auto rounded-2xl border border-border"><table className="w-full min-w-[520px] border-collapse text-left text-sm">
+      <p id="plan-table-help" className="mt-6 text-sm text-muted-foreground sm:hidden">Scroll sideways to compare all plans.</p>
+      <div role="region" aria-label="Plan feature comparison" aria-describedby="plan-table-help" tabIndex={0} className="mt-8 overflow-x-auto rounded-2xl border border-border focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0460d8]"><table className="w-full min-w-[520px] border-collapse text-left text-sm">
         <caption className="sr-only">Features planned for each Cozy plan at launch</caption>
         <thead className="bg-[#0460d8]/5"><tr><th scope="col" className="p-5 font-medium">Your toolkit</th>{plans.map(plan => <th scope="col" key={plan.name} className="p-5 text-center font-semibold">{plan.name}</th>)}</tr></thead>
         <tbody>{comparison.map(row => <tr key={row.feature} className="border-t border-border"><th scope="row" className="p-5 font-medium">{row.feature}</th>{row.included.map((included, i) => <td key={i} className="p-5 text-center">{included ? <Check className="mx-auto text-[#008937]" size={19} aria-label="Included" /> : <Minus className="mx-auto text-muted-foreground" size={18} aria-label="Not included" />}</td>)}</tr>)}</tbody>

@@ -34,7 +34,7 @@ export function ForProvidersSection() {
                   key={index}
                   className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm"
                 >
-                  <insight.icon className="w-4 h-4" style={{ color: insight.color }} />
+                  <insight.icon aria-hidden="true" className="w-4 h-4" style={{ color: insight.color }} />
                   <span className="text-sm text-white">{insight.label}</span>
                 </div>
               ))}
@@ -56,7 +56,7 @@ export function ForProvidersSection() {
             <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
               <div className="space-y-4">
                 <div className="flex items-center justify-between mb-6">
-                  <h4 className="font-semibold text-white">Patient Dashboard</h4>
+                  <h3 className="font-semibold text-white">Patient Dashboard</h3>
                   <span className="text-sm text-white">Example</span>
                 </div>
 
@@ -84,7 +84,7 @@ export function ForProvidersSection() {
 
                   <div className="p-4 bg-[#f25c05]/20 rounded-xl border border-[#f25c05]/30">
                     <div className="flex items-center gap-2 mb-1">
-                      <AlertTriangle className="w-4 h-4 text-[#f25c05]" />
+                      <AlertTriangle aria-hidden="true" className="w-4 h-4 text-[#f25c05]" />
                       <span className="text-sm font-medium text-white">Attention Flag</span>
                     </div>
                     <p className="text-sm text-white/70">Sleep pattern disruption detected over past 3 days</p>
