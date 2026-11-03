@@ -2,9 +2,16 @@
   "sourceCommit": "65a055af41160e7dd6665248e500bbe55e007629",
   "webkitColorRendering": [
     {
+      "platforms": ["win32", "linux"],
       "html": "<span>Continuous Care Ecosystem</span>",
       "chromiumSummary": "Fix any of the following: Element has insufficient color contrast of 2.29 (foreground color: #00bc4c, background color: #e6f8ed, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
       "webkitSummary": "Fix any of the following: Element has insufficient color contrast of 2.28 (foreground color: #00bc4c, background color: #e5f8ed, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+    },
+    {
+      "platforms": ["linux"],
+      "html": "<span class=\"text-sm text-white/70\">and so much more!</span>",
+      "chromiumSummary": "Fix any of the following: Element has insufficient color contrast of 2.17 (foreground color: #fbd3bb, background color: #f36c1e, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "webkitSummary": "Fix any of the following: Element has insufficient color contrast of 2.17 (foreground color: #fbd3bc, background color: #f36c1e, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
     }
   ],
   "findings": {
