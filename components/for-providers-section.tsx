@@ -5,7 +5,7 @@ export function ForProvidersSection() {
   const insights = [
     { label: "Mood Changes", icon: Activity, color: "#0460d8" },
     { label: "Trigger Patterns", icon: AlertTriangle, color: "#f25c05" },
-    { label: "Early Warning Signs", icon: TrendingUp, color: "#00bc4c" },
+    { label: "Shared Check-ins", icon: TrendingUp, color: "#00bc4c" },
     { label: "Coping Progress", icon: BarChart3, color: "#f2cb05" }
   ]
 
@@ -44,7 +44,7 @@ export function ForProvidersSection() {
             </div>
             
             <p className="text-lg text-white leading-relaxed">
-              This allows you to <strong className="text-[#f2cb05]">intervene earlier</strong>, <strong className="text-white">respond faster</strong>, and <strong className="text-[#00bc4c]">deliver better care</strong>.
+              Use shared check-ins to support conversations between sessions. Provider messages are not an emergency channel; do not assume immediate review or a response.
             </p>
 
             <Button asChild size="lg" className="bg-white text-[#f25c05] hover:bg-white/90 mt-4">
@@ -85,9 +85,9 @@ export function ForProvidersSection() {
                   <div className="p-4 bg-[#f25c05]/20 rounded-xl border border-[#f25c05]/30">
                     <div className="flex items-center gap-2 mb-1">
                       <AlertTriangle aria-hidden="true" className="w-4 h-4 text-[#f25c05]" />
-                      <span className="text-sm font-medium text-white">Attention Flag</span>
+                      <span className="text-sm font-medium text-white">Shared Journal</span>
                     </div>
-                    <p className="text-sm text-white/70">Sleep pattern disruption detected over past 3 days</p>
+                    <p className="text-sm text-white/70">A person chose to share an entry with their connected provider.</p>
                   </div>
 
                   <div className="grid grid-cols-3 gap-3 pt-4">
