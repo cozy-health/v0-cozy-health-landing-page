@@ -17,8 +17,9 @@ test('current documents have the approved effective date without erasing operati
     assert.equal(doc.editorial_status, 'final')
     assert.equal(doc.published, true)
     const revisedTerms = doc.id === 'tos' && doc.audience === 'consumer'
-    assert.equal(doc.effective_date, revisedTerms ? '2026-10-30' : '2026-10-29')
-    assert.equal(doc.version, revisedTerms ? '1.2' : '1.1')
+    const voiceRevision = doc.id === 'privacy_policy' || (doc.id === 'tos' && doc.audience === 'provider')
+    assert.equal(doc.effective_date, voiceRevision ? '2026-11-07' : revisedTerms ? '2026-10-30' : '2026-10-29')
+    assert.equal(doc.version, revisedTerms || voiceRevision ? '1.2' : '1.1')
   }
   for (const route of ['/support', '/cookies', '/health-disclosures', '/community-standards']) {
     assert.equal(manifest.documents.find(doc => doc.route === route)?.published, true)
