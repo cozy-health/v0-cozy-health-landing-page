@@ -20,10 +20,10 @@ export function CTASection() {
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button asChild size="lg" className="bg-white text-[#0460d8] hover:bg-white/90 px-8 shadow-xl">
+          <Button asChild size="lg" className="bg-white text-[#034dae] hover:bg-white/90 px-8 shadow-xl">
             <Link href="/waitlist">Join the Waitlist<ArrowRight className="w-4 h-4 ml-2" /></Link>
           </Button>
-          <Button asChild size="lg" className="bg-white text-[#0460d8] hover:bg-white/90 px-8 shadow-xl">
+          <Button asChild size="lg" className="bg-white text-[#034dae] hover:bg-white/90 px-8 shadow-xl">
             <a href="mailto:Team@cozyhealth.org">Contact Us</a>
           </Button>
         </div>

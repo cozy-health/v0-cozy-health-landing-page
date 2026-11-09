@@ -8,14 +8,14 @@ export function HeroSection() {
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0460d8]/10 text-[#0460d8] text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0460d8]/10 text-[#034dae] text-sm font-medium">
               <Heart className="w-4 h-4" />
               <span>Continuous Care Ecosystem</span>
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight text-balance">
               Mental Health Care That{" "}
-              <span className="text-[#0460d8]">Stays With You</span>
+              <span className="text-[#034dae]">Stays With You</span>
             </h1>
             
             <p className="text-lg sm:text-xl text-muted-foreground max-w-xl leading-relaxed">
@@ -29,22 +29,22 @@ export function HeroSection() {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-[#0460d8] text-[#0460d8] hover:bg-[#0460d8]/10">
+              <Button asChild size="lg" variant="outline" className="border-[#0460d8] text-[#034dae] hover:bg-[#0460d8]/10">
                 <a href="#how-it-works">Learn More</a>
               </Button>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-border">
               <div className="flex flex-col gap-1">
-                <span className="text-2xl font-bold text-[#0460d8]">Self-care</span>
+                <span className="text-2xl font-bold text-[#034dae]">Self-care</span>
                 <span className="text-sm text-muted-foreground">At your pace</span>
               </div>
               <div className="flex flex-col gap-1">
-                <span className="text-2xl font-bold text-[#00bc4c]">Real-time</span>
+                <span className="text-2xl font-bold text-[#006e2c]">Real-time</span>
                 <span className="text-sm text-muted-foreground">Mood Tracking</span>
               </div>
               <div className="flex flex-col gap-1">
-                <span className="text-2xl font-bold text-[#f25c05]">Proactive</span>
+                <span className="text-2xl font-bold text-[#9a3b00]">Proactive</span>
                 <span className="text-sm text-muted-foreground">Personal Reflection</span>
               </div>
             </div>

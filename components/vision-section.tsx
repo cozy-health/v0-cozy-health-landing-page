@@ -20,21 +20,21 @@ export function VisionSection() {
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Vision */}
           <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0460d8]/10 text-[#0460d8] text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0460d8]/10 text-[#034dae] text-sm font-medium">
               <Eye className="w-4 h-4" />
               <span>Our Vision</span>
             </div>
             
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground text-balance">
               A World Where No One Navigates{" "}
-              <span className="text-[#0460d8]">Mental Health Alone</span>
+              <span className="text-[#034dae]">Mental Health Alone</span>
             </h2>
             
             <div className="space-y-4">
               {visionPoints.map((point, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-[#0460d8]/10 flex items-center justify-center shrink-0 mt-0.5">
-                    <Check className="w-3 h-3 text-[#0460d8]" />
+                    <Check className="w-3 h-3 text-[#034dae]" />
                   </div>
                   <p className="text-muted-foreground leading-relaxed">{point}</p>
                 </div>
@@ -44,14 +44,14 @@ export function VisionSection() {
 
           {/* Mission */}
           <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00bc4c]/10 text-[#00bc4c] text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00bc4c]/10 text-[#006e2c] text-sm font-medium">
               <Target className="w-4 h-4" />
               <span>Our Mission</span>
             </div>
             
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground text-balance">
               Transform Global Mental Health Through{" "}
-              <span className="text-[#00bc4c]">Continuous Care</span>
+              <span className="text-[#006e2c]">Continuous Care</span>
             </h2>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -62,7 +62,7 @@ export function VisionSection() {
               {missionPoints.map((point, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-[#00bc4c]/10 flex items-center justify-center shrink-0 mt-0.5">
-                    <Check className="w-3 h-3 text-[#00bc4c]" />
+                    <Check className="w-3 h-3 text-[#006e2c]" />
                   </div>
                   <p className="text-muted-foreground leading-relaxed">{point}</p>
                 </div>

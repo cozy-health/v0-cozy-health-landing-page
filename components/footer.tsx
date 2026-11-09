@@ -107,7 +107,7 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-1 text-sm text-background/70">
             <span>Made with</span>
-            <Heart className="w-4 h-4 text-[#f25c05] fill-current" />
+            <Heart className="w-4 h-4 text-[#9a3b00] fill-current" />
             <span>for better mental health</span>
           </div>
         </div>
