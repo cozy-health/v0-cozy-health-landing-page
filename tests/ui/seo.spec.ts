@@ -52,6 +52,8 @@ test('public links resolve and navigation timing is recorded', async ({ page, re
  for (const href of links) expect((await request.get(href)).status(), href).toBeLessThan(400)
  for (const path of ['/guardians', '/guardian-authorization']) {
   await page.goto(path)
-  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/)
+  const directives = await page.locator('meta[name="robots"]').evaluateAll(tags => tags.map(tag => tag.getAttribute('content') ?? ''))
+  expect(directives.length).toBeGreaterThan(0)
+  expect(directives.every(value => value.includes('noindex'))).toBe(true)
  }
 })
