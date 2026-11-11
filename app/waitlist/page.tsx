@@ -1,12 +1,10 @@
+import { publicPageMetadata } from '@/lib/seo'
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft, ShieldCheck } from "lucide-react"
 import { WaitlistForm } from "@/components/waitlist-form"
 
-export const metadata = {
-  title: "Join the Waitlist | Cozy Health",
-  description: "Be among the first to experience continuous mental health care with Cozy Health.",
-}
+export const metadata = publicPageMetadata('/waitlist')
 
 export default function WaitlistPage() {
   return (

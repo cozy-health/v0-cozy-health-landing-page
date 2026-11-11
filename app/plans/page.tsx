@@ -1,9 +1,10 @@
+import { publicPageMetadata } from '@/lib/seo'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Footer } from '@/components/footer'
 import { ArrowLeft, ArrowRight, Check, Heart, GraduationCap, Sparkles, ShieldCheck, Minus } from 'lucide-react'
 
-export const metadata = { title: 'Plans | Cozy Health' }
+export const metadata = publicPageMetadata('/plans')
 
 const plans = [
   { name: 'Standard', eyebrow: 'Your daily foundation', icon: Heart, description: 'A little space to check in, reflect and find your rhythm.', features: ['Written journals', 'Mood tracking and streaks', 'Read-only community access'], featured: false },
