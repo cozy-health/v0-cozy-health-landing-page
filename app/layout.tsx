@@ -9,7 +9,11 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
  metadataBase: new URL(siteUrl), ...publicPageMetadata('/'),
- icons: { icon: { url: '/logo.png', type: 'image/png' }, apple: '/apple-icon.png' },
+ icons: {
+  icon: { url: '/favicon-96x96.png', type: 'image/png', sizes: '96x96' },
+  shortcut: '/favicon.ico',
+  apple: { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+ },
 }
 const structuredData = { '@context': 'https://schema.org', '@graph': [
  { '@type': 'Organization', '@id': siteUrl + '/#organization', name: 'Cozy Health', url: siteUrl, logo: siteUrl + '/logo.png' },
