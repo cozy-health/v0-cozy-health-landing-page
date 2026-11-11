@@ -1,0 +1,35 @@
+[
+  {
+    "path": "/icon-dark-32x32.png",
+    "sha256": "f3e3be5df918d0e30f7e42c53a9b141186e31b850b26ab4a66808d91e60a20ac",
+    "size": 32
+  },
+  {
+    "path": "/icon-light-32x32.png",
+    "sha256": "f3e3be5df918d0e30f7e42c53a9b141186e31b850b26ab4a66808d91e60a20ac",
+    "size": 32
+  },
+  {
+    "path": "/apple-icon.png",
+    "sha256": "745d8b852fbc810493202501bc9788f1668f1c1c2319b24114636b7fcf95f922",
+    "size": 180
+  },
+  {
+    "path": "/apple-touch-icon.png",
+    "sha256": "745d8b852fbc810493202501bc9788f1668f1c1c2319b24114636b7fcf95f922",
+    "size": 180
+  },
+  {
+    "path": "/favicon-96x96.png",
+    "sha256": "32bdb525f820726e001e1247cc0cc6ab7419414d532aa2bb8f4b5ccd4e7cb827",
+    "size": 96
+  },
+  {
+    "path": "/icon.svg",
+    "sha256": "0ed6a97453691adfd57f2305ecaa8af496a3932b0b58cde8dface92ec34911f6"
+  },
+  {
+    "path": "/favicon.ico",
+    "sha256": "baf35f3ea797f7ba837769ac79461f54b3863d9a6b515c5a5fd80af1dd8fed29"
+  }
+]
