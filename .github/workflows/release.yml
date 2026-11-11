@@ -10,6 +10,9 @@ jobs:
   web:
     name: Website release checks
     runs-on: ubuntu-24.04
+    container:
+      image: mcr.microsoft.com/playwright:v1.59.1-noble@sha256:fb6b449b21dc803cfa5fc2d88637511ac2f20f04f7074e516c769f46eebc38c6
+      options: --ipc=host
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
@@ -23,7 +26,6 @@ jobs:
       - run: npm run build
         env:
           COZY_DEPLOYMENT_ENV: production
-      - run: npx playwright install --with-deps chromium webkit
       - run: npm run test:ui
         env:
           PLAYWRIGHT_EXPECT_PRODUCTION: '1'
