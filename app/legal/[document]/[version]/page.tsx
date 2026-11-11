@@ -7,7 +7,7 @@ export async function generateMetadata({ params }: { params: Promise<{ document:
   const { document, version } = await params
   const doc = legalArchives.find(item => `${item.audience}-${item.id}` === document && item.version === version)
   if (!doc) notFound()
-  return pageMetadata('/legal/' + document + '/' + version, doc.title + ' ? ' + version + ' | Cozy Health', 'Archived version ' + version + ' of the Cozy Health ' + doc.title + '.', false)
+  return pageMetadata('/legal/' + document + '/' + version, doc.title + ' - ' + version + ' | Cozy Health', 'Archived version ' + version + ' of the Cozy Health ' + doc.title + '.', false)
 }
 export default async function Archive({ params }: { params: Promise<{ document: string; version: string }> }) {
   const { document, version } = await params
