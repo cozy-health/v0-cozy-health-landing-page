@@ -32,7 +32,7 @@ export function WaitlistForm() {
   if (status === "success") {
     return (
       <div className="rounded-2xl border border-[#00bc4c]/30 bg-[#00bc4c]/10 p-6 text-left" role="status">
-        <CheckCircle2 className="mb-3 h-7 w-7 text-[#00bc4c]" aria-hidden="true" />
+        <CheckCircle2 className="mb-3 h-7 w-7 text-[#006e2c]" aria-hidden="true" />
         <p className="text-lg font-semibold text-foreground">You&apos;re on the list!</p>
         <p className="mt-2 leading-relaxed text-muted-foreground">
           Thanks for signing up. We&apos;ll be in touch with updates and early access details.
@@ -55,7 +55,7 @@ export function WaitlistForm() {
         <input id="is-provider" name="is_provider" type="checkbox" value="Yes" className="h-5 w-5 shrink-0 rounded border-input accent-[#0460d8] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0460d8]" />
         I am a healthcare provider
       </label>
-      {status === "error" && <p className="text-sm text-[#f25c05]" role="alert">Something went wrong. Please try again.</p>}
+      {status === "error" && <p className="text-sm text-[#9a3b00]" role="alert">Something went wrong. Please try again.</p>}
       <p className="text-sm text-muted-foreground">We use your name, email and provider status to respond to your waitlist request through Formspree. <a href="/privacy" className="underline">Privacy Policy</a>.</p>
       <Button type="submit" size="lg" disabled={status === "pending"} className="w-full bg-[#0460d8] text-white hover:bg-[#0460d8]/90">
         {status === "pending" ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" />Joining...</> : <>Join the Waitlist<ArrowRight className="ml-2 h-4 w-4" /></>}

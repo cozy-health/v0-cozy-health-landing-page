@@ -35,14 +35,14 @@ export function ForIndividualsSection() {
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="lg:order-2 space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0460d8]/10 text-[#0460d8] text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0460d8]/10 text-[#034dae] text-sm font-medium">
               <Sparkles className="w-4 h-4" />
               <span>For Individuals</span>
             </div>
             
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground text-balance">
               Cozy becomes your{" "}
-              <span className="text-[#0460d8]">everyday wellbeing toolkit</span>
+              <span className="text-[#034dae]">everyday wellbeing toolkit</span>
             </h2>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
